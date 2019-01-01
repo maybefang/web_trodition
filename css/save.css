@@ -1,0 +1,19 @@
+body{
+	display: table;
+	font-family: "华文行楷";
+	font-size: 1.5em;
+}
+#forum_main{
+	
+}
+aside{
+    float: right;
+	position: fixed;
+	width: 30px;
+	right: 10%;
+	top: 20%;
+	font-size: 3em;
+	border-color: #FF0000;
+	border-width: 2px;
+	border-style: solid;
+}

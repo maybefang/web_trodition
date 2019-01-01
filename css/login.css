@@ -1,0 +1,51 @@
+body{
+	font-family: "隶书";
+	background-image: url(../img/login_border.gif);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 5%;
+	min-width: 1250px;
+	min-height: 490px;
+	background-color: #f6f6f6;
+} 
+#dec_img{
+	margin-left: 9%;
+	margin-top: 3%;
+	width: 35%;
+}
+#decw_and_form{
+	float: right;
+	font-size: 120%;
+	width: 45%;
+	margin-top: 7%;
+	margin-right: 9%;
+	padding-top: 40px;
+	/* background-image: url(../img/login_form_backimg.gif);
+	background-size: 100% 100%; */
+}
+#form_ttl{
+	margin-top: 0.5%;
+	text-align: center;
+}
+#login_form{
+	text-align: center;
+}
+#login_name,#login_pwd{
+	padding-top: 2%;
+}
+#dec_words{
+	padding-left: 25%;
+	padding-top: 5%;
+	font-size: 1.1em;
+	list-style-type: none;
+}
+
+#login_b_register,#login_b_submit{
+	font-family: "隶书";
+	font-size: 1em;
+	margin-top: 2%;
+	background-image: url(../img/button_border.ico);
+	background-size: 100% 100%;
+	width: 100px;
+	height: 40px;
+}

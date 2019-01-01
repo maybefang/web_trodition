@@ -1,0 +1,101 @@
+body{
+	font-family: "华文行楷";
+	font-size: 1.5em;
+	margin: 3%;
+	background-color: #dfe9e0;
+	min-width: 1250px;
+	min-height: 490px;
+	/* border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px; */
+}
+#item_ttl{
+	font-size: 1.7em;
+	padding-left: 3%;
+	padding-top: 3%;
+	padding-bottom: 2%;
+}
+#all{
+	display: table;
+}
+#first_dec,#second_dec{
+	display: inline; 
+	width: 40px;
+	font-size: 1.4em;
+}
+#first_dec{
+	position: fixed;
+	right: 5%;
+	top: 15%;
+}
+#second_dec{
+	position: fixed;
+	right: 8%;
+	top: 30%;
+}
+#row_1{
+	display: table-row;
+}
+#navigation_left{
+	display: table-cell;
+	width: 900px;
+}
+#navigation_right{
+	display: table-cell;
+	width: 250px;
+	text-align: right;
+}
+#navigation{
+	font-size: 1.4em;
+	color: #A9A9A9;
+}
+#index,#forum,#shops,#popularization,#hairstyle,#login,#register{
+	text-decoration: none;
+	margin-left: 4%;
+	color: #484891;
+}
+#shops{
+	color: burlywood;
+}
+#publisher{
+	position: fixed;
+	left: 3%;
+	top:30%;
+	max-width: 265px%; 
+	border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px;
+}
+#forum_add_main{
+	margin-left: 15%;
+	padding: 4%;
+	padding-bottom: 2%;
+	border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px;
+}
+#forum_name,#forum_content{
+	padding: 0.5%;
+	/* border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px; */
+}
+#forum_content{
+	font-size: 1em;
+}
+#i_forum_name{
+	width:830px;
+	font-size: 1em;
+	border-color: #00FF00;
+	border-style: solid;
+	border-width: 2px; 
+}
+
+.radio{
+	padding-left: 5%;
+}
+#add_forum_b{
+	font-family: "隶书";
+	font-size: 1em;
+	margin-left: 40%;
+}

@@ -1,0 +1,124 @@
+body{
+	font-family: "华文行楷";
+	font-size: 1.5em;
+	margin: 3%;
+	background-color: #dfe9e0;
+	min-width: 1250px;
+	min-height: 490px;
+	/* border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px; */
+}
+#item_ttl{
+	font-size: 1.7em;
+	padding-left: 3%;
+	padding-top: 3%;
+	padding-bottom: 2%;
+}
+#all{
+	display: table;
+}
+#row_1{
+	display: table-row;
+}
+#navigation_left{
+	display: table-cell;
+	width: 900px;
+}
+#navigation_right{
+	display: table-cell;
+	width: 250px;
+	text-align: right;
+}
+#navigation{
+	font-size: 1.4em;
+	color: #A9A9A9;
+}
+#index,#forum,#shops,#popularization,#hairstyle,#login,#register{
+	text-decoration: none;
+	margin-left: 4%;
+	color: #484891;
+}
+#forum{
+	color: burlywood;
+}
+
+table{
+	background-color: #f6f6f6;
+	width: 90%;
+	text-align: left;
+	padding: 40px;
+}
+
+.item_col1{
+	padding-left: 2%;
+	background-image: url(../img/item_col1_bkimg.jpg);
+	background-size: 100% 100%;
+}
+.one_person{
+	margin: 15%;
+}
+.item_col2{
+	width: 80%;
+	background-image: url(../img/item_col2_bkimg.gif);
+	background-size: 100% 100%;
+}
+.date{
+	margin-bottom: 0%;
+	text-align: right;
+}
+.item_col3{
+	width: 1%;
+	background-image: url(../img/item_col3_bkimg.gif);
+	background-size: 100% 100%;
+}
+#first_dec,#second_dec{
+	display: inline; 
+	width: 40px;
+	font-size: 1.4em;
+}
+#first_dec{
+	position: fixed;
+	right: 5%;
+	top: 15%;
+}
+#second_dec{
+	position: fixed;
+	right: 8%;
+	top: 30%;
+}
+
+#add_message{
+	margin: 2%;
+	/* border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px; */
+}
+/* #add_content{
+	border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px;
+} */
+#content_ttl{
+	display: inline;
+	margin-left: 3%;
+	width: 14px;
+	/* border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px; */
+}
+
+#content_border{
+	text-align: left;
+	font-size: 1em;
+	font-family: "华文行楷";
+	display: inline;
+	height: 100px;
+	width: 89%;
+}
+#forum_item_b_add{
+	font-family: "隶书";
+	font-size: 1em;
+	margin-top: 2%;
+	margin-left: 90%;
+}

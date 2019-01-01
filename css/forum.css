@@ -1,0 +1,106 @@
+body{
+	font-family: "华文行楷";
+	font-size: 1.5em;
+	margin: 3%;
+	background-color: #dfe9e0;
+	min-width: 1250px;
+	min-height: 490px;
+	/* border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px; */
+}
+
+#item_ttl{
+	font-size: 1.7em;
+	padding-left: 3%;
+	padding-top: 3%; 
+	width: 70%;
+}
+#search{
+	width: 30%;
+	font-size: 1.2em;
+}
+#input_key{
+	height: 30px;
+	width: 260px;
+}
+#b_search{
+	margin-left: 5%;
+	font-family: "华文行楷";
+	font-size: 0.7em;
+	height: 30px;
+}
+
+#all{
+	display: table;
+}
+#row_1{
+	display: table-row;
+}
+#navigation_left{
+	display: table-cell;
+	width: 900px;
+}
+#navigation_right{
+	display: table-cell;
+	width: 250px;
+	text-align: right;
+}
+#navigation_tail{
+	display: table-cell;
+	width: 350px;
+	text-align: right;
+}
+#navigation{
+	font-size: 1.4em;
+	color: #A9A9A9;
+}
+#index,#forum,#shops,#popularization,#hairstyle,#login,#register,#forum_add{
+	text-decoration: none;
+	margin-left: 4%;
+	color: #484891;
+}
+#forum{
+	color: burlywood;
+}
+#first_dec,#second_dec{
+	display: inline; 
+	width: 40px;
+	font-size: 1.4em;
+}
+#first_dec{
+	position: fixed;
+	right: 5%;
+	top: 15%;
+}
+#second_dec{
+	position: fixed;
+	right: 8%;
+	top: 30%;
+}
+table{
+	/* background-color: #f6f6f6; */
+	width: 90%;
+	text-align: left;
+	padding: 40px;
+}
+td{
+	padding-top: 2%;
+}
+.ttl{
+	width: 65%;
+	border-bottom-color: #c17d7e;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+.usr{
+	width: 20%;
+	border-bottom-color: #c17d7e;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+.date{
+	border-bottom-color: #c17d7e;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}

@@ -1,0 +1,75 @@
+body{
+	font-family: "楷体";
+	margin: 5%;
+	padding-left: 6%;
+	background-color: #f6f6f6;
+	background-image: url(../img/border_all_small.gif);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#ttl{
+	margin-bottom: 3%;
+	font-size: 1.5em;
+	color: red;
+}
+#second{
+	text-indent: 5em;
+}
+#navigation{
+	font-size: 1.8em;
+	color: #A9A9A9;
+}
+#index,#forum,#shops,#popularization,#hairstyle,#login,#register{
+	text-decoration: none;
+	margin-left: 4%;
+	color: #484891;
+}
+#index{
+	color: burlywood;
+}
+#all{
+	display: table;
+}
+#row_1{
+	display: table-row;
+}
+#navigation_left{
+	display: table-cell;
+	width: 900px;
+}
+#navigation_right{
+	display: table-cell;
+	width: 250px;
+	text-align: right;
+}
+#row_2{
+	display: table-row;
+}
+#introduction{
+	display: table-cell;
+	width: 75%;
+	font-size: 1.5em;
+}
+#intro_h{
+	font-size: 1.7em;
+}
+#intro_artical{
+	padding-top: 0px;
+	text-indent: 2em;
+}
+#p_three{
+	padding-left: 60%;
+}
+#song{
+	display: table-cell;
+	font-family: "华文行楷";
+	width: 25%;
+	font-size: 1.5em;
+	/*padding-left: 3%;*/
+	list-style-type: none;
+}
+#song_ttl{
+	font-size: 1.4em;
+	padding-top: 5%;
+	padding-bottom: 7%;
+}

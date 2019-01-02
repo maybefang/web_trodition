@@ -60,8 +60,8 @@ body{
 #recommender{
 	position: fixed;
 	left: 3%;
-	top:30%;
-	max-width: 265px%; 
+	top: 35%;
+	max-width: 265px; 
 }
 #shop_recommend{
 	margin-left: 15%;
@@ -71,21 +71,28 @@ body{
 #shop_name,#address,#plant,#skey,#shop_description,#sprice{
 	padding: 0.5%;
 }
+#address{
+	/*display: inline;*/
+}
 #i_address,#i_plant,#i_popularization_name,#i_shop_name,#i_sprice{
 	font-size: 1em;
+	font-family: "隶书";
 }
 #i_address{
-	width:830px;
+	width: 87%;
 }
 #i_sprice{
-	width: 965px;
+	width: 74%;
 }
 #i_plant,#i_shop_name{
-	width: 1000px;
+	width: 77%;
 }
 #shop_description{
-	font-family: "华文行楷";
 	font-size: 1em;
+	font-family: "隶书";
+	padding: 0.5%;
+	width: 87%;
+	height: 600px;
 }
 .radio{
 	padding-left: 5%;

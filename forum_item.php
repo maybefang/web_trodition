@@ -3,14 +3,16 @@
 	<head>
 		<?php
 			include("conn.php");
+			session_start();
 			if(isset($_GET['f_aid']))
 			{
-				$query = mysql_query('SELECT * FROM `forum_all` WHERE `f_aid` =\'' . $_GET['f_aid'] . '\'');
+				$sql = 'SELECT * FROM forum_all WHERE f_aid =\'' . $_GET['f_aid'] . '\'';
+				$query = mysqli_query($conn,$sql);
 				//帖子相关信息
-				$row_fa = mysql_fetch_array($query);
-				$query = mysql_query('SELECT * FROM `user` WHERE `uid` = \'' . $row_fa['uid'] . '\'');
+				$row_fa = mysqli_fetch_array($query);
+				$query = mysqli_query($conn,'SELECT * FROM user WHERE uid = \'' . $row_fa['uid'] . '\'');
 				//帖子发布者相关信息
-				$row_fa_user = mysql_fetch_array($query);
+				$row_fa_user = mysqli_fetch_array($query);
 		?>
 		<meta charset="utf-8">
 		<title>夜话-<?php echo $row_fa['title']; ?></title>
@@ -25,15 +27,25 @@
 			<div id="row_1">
 				<nav id="navigation">
 					<div id="navigation_left">
-						<a href="index.html" id="index"><img src="img/navigation.ico">主页</a>
+						<a href="index.php" id="index"><img src="img/navigation.ico">主页</a>
 						<a href="forum.php" id="forum"><img src="img/navigation.ico">夜话</a>
 						<a href="shops.php" id="shops"><img src="img/navigation.ico">商铺</a>
 						<a href="popularization.php" id="popularization"><img src="img/navigation.ico">科普</a>
-						<a href="" id="hairstyle"><img src="img/navigation.ico">绾青丝</a>
 					</div>
 					<div id="navigation_right">
+						<?php
+						if(isset($_SESSION['uid'])){
+					?>
+						<label id="uid"><img src="img/navigation.ico"><?php echo $_SESSION['uid']; ?></label>
+					<?php
+						}
+						else{
+					?>
 						<a href="login.php" id="login"><img src="img/navigation.ico">登入</a>
 						<a href="register.php" id="register"><img src="img/navigation.ico">注册</a>
+					<?php
+					}
+					?>
 					</div>
 				</nav>
 			</div>
@@ -49,12 +61,12 @@
 								if(@$row_fa_user['sex'])
 								{
 							?>
-							<img src="./img/male.jpg" alt="这是一个头像" />
+							<img src="./img/male.jpg" alt="这是一个头像"  class="head_img" />
 							<?php
 								}
 								else{
 							?>
-							<img src="./img/female.jpg" alt="这是一个头像" />
+							<img src="./img/female.jpg" alt="这是一个头像" class="head_img" />
 							<?php
 								}
 							?>
@@ -77,10 +89,12 @@
 					<td class="item_col3"></td>
 				</tr>
 				<?php
-					if(@$POST['submit']){
-						$sql = "insert into forum_item (f_aid,uid,f_acontent)".
-						       "values('$_GET['f_aid']','$_SESSION['uid']','$_POST['add_content']')";
-						mysql_query($sql);
+					if(isset($_POST['submit'])){
+						$sql = "insert into forum_item (f_aid,uid,f_icontent)".
+						       " values('$_GET[f_aid]','$_SESSION[uid]','$_POST[f_icontent]')";
+						mysqli_query($conn,$sql);
+						$sql = "update forum_all set f_aupdatetime = (select f_itime from forum_item where f_aid = $_GET[f_aid] order by f_itime DESC LIMIT 1) where f_aid = $_GET[f_aid]";
+						mysqli_query($conn,$sql);
 						echo "<script language=\"javascript\">alert('发表成功');</script>";
 					}
 				?>
@@ -102,35 +116,41 @@
 							<form action="#" method="post" name="myform" onsubmit="return CheckPost();">
 								<div id="add_content">
 									<div id="content_ttl">留言处：</div>
-									<textarea name="f_icontent" id="content_border" rows="5" cols="45"></textarea>
+									<textarea name="f_icontent" id="content_border"></textarea>
 								</div>
-								<input type="submit" value="发表" id="forum_item_b_add"/>
+								<input type="submit" name="submit" value="发表" id="forum_item_b_add"/>
 							</form>
 						</div>
 					</td>
-				</tr>
+				</tr>			
 				<?php
-				//搜索和主贴有关的留言
-				$query = mysql_query('SELECT * FROM `forum_item` WHERE `f_aid` = \'' . $_GET['f_aid'] . '\' ORDER BY f_itime DESC');
-				while($row_fi = mysql_fetch_array($query)){
-					if($row_fi['sex']){
+					//搜索和主贴有关的留言
+					$sql = 'SELECT * FROM forum_item WHERE `f_aid` = \'' . $_GET['f_aid'] . '\' ORDER BY f_itime DESC';
+					$query = mysqli_query($conn,$sql);
+					while($row_fi = mysqli_fetch_array($query)){
+						//找每一个row_fi（每一条回帖）对应uid的人的信息。
+						$query = mysqli_query($conn,'SELECT * FROM user WHERE `uid` = \''.$row_fi['uid'] . '\'');
+						$row_fi_person = mysqli_fetch_array($query);
 				?>
 				<tr>
 					<td class="item_col1">
 						<div class="one_person">
-							<img src="./img/male.jpg" alt="这是一个头像" />
+						<?php
+							if($row_fi_person['sex']){
+						?>
+							<img src="./img/male.jpg" alt="这是一个头像" class="head_img" />
 							<?php
-									}
-									else{
+								}
+								else{
 							?>
-							<img src="./img/male.jpg" alt="这是一个头像" />
+							<img src="./img/male.jpg" alt="这是一个头像" class="head_img" />
 							<?php
-									}
+								}
 							?>
 							<!-- 名字 -->
-							<p><?php echo $row_fi['uid']; ?></p>
+							<p><?php echo $row_fi_person['uid']; ?></p>
 							<!-- 个签 -->
-							<p><?php echo $row_fi['signature']; ?></p>
+							<p><?php echo $row_fi_person['signature']; ?></p>
 						</div>
 					</td>
 					<td class="item_col2">

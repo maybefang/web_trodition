@@ -20,13 +20,13 @@
 							{
 								$uid=empty($_POST['uid'])?'':$_POST['uid'];
 								$password=empty($_POST['password'])?'':$_POST['password'];
-								$sql="select * from user where uid='$uid' and password='$password'";
-								$query=mysql_query($sql);
-								$array=mysql_fetch_array($query);
+								$sql="select * from user where uid='".$uid."' and password='".$password."'";
+								$query=mysqli_query($conn,$sql);
+								$array=mysqli_fetch_array($query);
 								if(!empty($array)){
 									SESSION_start();
 									$_SESSION['uid']=$uid;
-									echo "<script>alert('登录成功');location.href='add.php'</script>";
+									echo "<script>alert('登录成功');location.href='index.php'</script>";
 								}
 								else{
 									echo "<script>alert('请先注册')</script>";
@@ -50,10 +50,10 @@
 								}
 							}
 						</SCRIPT>
-						<form action="login.php" method="post" name="myform">
+						<form action="#" method="post" name="myform" onsubmit="Checklogin();">
 							<div id="login_name">名帖：<input type="text" name="uid" /></div>
 							<div id="login_pwd">密码：<input type="password" name="password" /></div>
-							<input type="submit" value="登入" id="login_b_submit" />
+							<input type="submit" name="submit" value="登入" id="login_b_submit" />
 							<a href="register.php"><button id="login_b_register">注册</button></a>
 						</form>
 					</div>

@@ -10,4 +10,7 @@ web作业
      科普主页（popularization.php）、科普搜索页（popularization_search.php）、科普内容页（popularization_item.php）、科普编辑页（popularization_add.php）、<br>
      店铺推荐主页（shops.php）、店铺推荐搜索页（shops_search.php）、店铺推荐内容（shop_item.php）、店铺推荐编辑页（shop_add.php）。<br>
 ~~~~~~~~~~~~~~~~~~~~以上为19.1.1~~~~~~~~~~~~~~~~~~~~~~~~~
-
+功能没有变化，改了bug，页面可以正常运行，并且改变了一些比例<br>
+主页(index.html)改为(index.php)<br>
+删掉了“绾青丝”导航，没时间做上传视频功能了<br>
+~~~~~~~~~~~~~~~~~~~~以上为19.1.2~~~~~~~~~~~~~~~~~~~~~~~~~~

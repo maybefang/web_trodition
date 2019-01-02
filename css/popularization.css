@@ -17,11 +17,13 @@ body{
 }
 #search{
 	width: 30%;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 #input_key{
+	font-family: "华文行楷";
+	font-size: 0.9em;
 	height: 30px;
-	width: 260px;
+	width: 200px;
 }
 #b_search{
 	margin-left: 5%;
@@ -41,13 +43,12 @@ body{
 }
 #navigation_right{
 	display: table-cell;
-	width: 250px;
-	text-align: right;
+	width: 230px;
 }
 #navigation_tail{
 	display: table-cell;
-	width: 350px;
-	text-align: right;
+	padding-left: 3%;
+	width: 20%;
 }
 #navigation{
 	font-size: 1.4em;
@@ -87,7 +88,23 @@ td{
 }
 .ttl{
 	width: 65%;
+	border-bottom-color: #c17d7e;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+.ttl a{
+	text-decoration: none;
+	color: black;
 }
 .usr{
 	width: 20%;
+	border-bottom-color: #c17d7e;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+.date{
+	border-bottom-color: #c17d7e;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
 }
